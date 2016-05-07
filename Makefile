@@ -4,9 +4,9 @@ ORG = amylum
 BUILD_DIR = /tmp/$(PACKAGE)-build
 RELEASE_DIR = /tmp/$(PACKAGE)-release
 RELEASE_FILE = /tmp/$(PACKAGE).tar.gz
-PATH_FLAGS = --prefix=/usr/lib/musl --exec-prefix=/usr
+PATH_FLAGS = --prefix=/usr
 CONF_FLAGS = --enable-wrapper=gcc
-CFLAGS = -static -static-libgcc -Wl,-static -fPIC
+CFLAGS = -fPIC
 
 PACKAGE_VERSION = $$(git --git-dir=upstream/.git describe --tags | sed 's/v//')
 PATCH_VERSION = $$(cat version)
@@ -30,7 +30,7 @@ build: submodule
 	cp -R upstream $(BUILD_DIR)
 	cd $(BUILD_DIR) && CFLAGS='$(CFLAGS)' ./configure $(PATH_FLAGS) $(CONF_FLAGS)
 	cd $(BUILD_DIR) && make DESTDIR=$(RELEASE_DIR) install
-	mv $(RELEASE_DIR)/lib/* $(RELEASE_DIR)/usr/lib/
+	mv -v $(RELEASE_DIR)/lib/* $(RELEASE_DIR)/usr/lib/
 	rm -rf $(RELEASE_DIR)/lib
 	mkdir -p $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)
 	cp $(BUILD_DIR)/COPYRIGHT $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)/LICENSE
