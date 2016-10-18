@@ -1,0 +1,24 @@
+name 'musl'
+org 'amylum'
+
+licenses 'COPYRIGHT'
+
+configure_flags(
+  prefix: '/usr/lib/musl',
+  'exec-prefix': '/usr',
+  'enable-wrapper': 'gcc'
+)
+
+harden
+
+build do
+  configure
+  make
+  install
+  run "mv -v #{releasedir}/lib/* #{releasedir}/usr/lib/"
+  rm 'lib'
+end
+
+test do
+  # TODO: add tests
+end
