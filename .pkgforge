@@ -12,6 +12,7 @@ configure_flags(
 harden
 
 patch '0001-enable-pie-pic.patch'
+patch '0002-wrapper-name.patch'
 
 build do
   configure
