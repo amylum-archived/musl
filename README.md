@@ -1,7 +1,7 @@
 musl
 ==========
 
-[![Build Status](https://img.shields.io/circleci/project/amylum/musl/master.svg)](https://circleci.com/gh/amylum/musl)
+[![Build Status](https://img.shields.io/travis/com/amylum/musl.svg)](https://travis-ci.com/amylum/musl)
 [![GitHub release](https://img.shields.io/github/release/amylum/musl.svg)](https://github.com/amylum/musl/releases)
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
