@@ -1,9 +1,9 @@
 musl
 ==========
 
-[![Build Status](https://img.shields.io/travis/com/amylum/musl.svg)](https://travis-ci.com/amylum/musl)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/amylum/musl/Build)](https://github.com/amylum/musl/actions))
 [![GitHub release](https://img.shields.io/github/release/amylum/musl.svg)](https://github.com/amylum/musl/releases)
-[![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
+[![License](https://img.shields.io/github/license/amylum/musl)](https://github.com/amylum/musl/blob/master/LICENSE)
 
 Package repo for [musl](http://www.musl-libc.org/)
 
